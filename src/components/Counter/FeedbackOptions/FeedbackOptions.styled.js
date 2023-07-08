@@ -9,6 +9,7 @@ export const ButtonList = styled.ul`
 export const ButtonItem = styled.button`
   padding: 10px 20px;
   border-radius: 3px;
+  text-transform: capitalize;
   cursor: pointer;
   &:hover {
     color: white;

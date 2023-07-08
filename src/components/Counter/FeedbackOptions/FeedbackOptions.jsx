@@ -7,7 +7,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         return (
           <li key={index}>
             <ButtonItem type="button" name={option} onClick={onLeaveFeedback}>
-              {option.replace(option[0], option[0].toUpperCase())}
+              {option}
             </ButtonItem>
           </li>
         );
@@ -17,6 +17,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.array.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
